@@ -7,7 +7,7 @@ bool isPossible(vector<int> &stalls, int k, int mid, int n) {
         
         if(stalls[i]-lastPos >= mid){
             cowCount++;
-            if(cowCount==k)
+            if(cowCount==k)                      //agar maine k cows ko place kr diya then return true
             {
                 return true;
             }
@@ -29,7 +29,7 @@ int aggressiveCows(vector<int> &stalls, int k)
     while(s<=e) {
         if(isPossible(stalls, k, mid, n)) {
             ans = mid;
-            s = mid + 1;
+            s = mid + 1;              //kyunki largest distance return krna hai
         }
         else
         {
